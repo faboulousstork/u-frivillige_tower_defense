@@ -14,9 +14,11 @@ public class Spawn_frivilligt : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public int wawe = 0;
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        wawe += 1; 
+        if (Input.GetKey(KeyCode.Space) && wawe % 119 == 0)
         {
             Debug.Log("rasmus er noob");
         }
