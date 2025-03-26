@@ -281,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2b706071ab092409c7175dd6cf59f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ilive: 0
 --- !u!4 &222401331
 Transform:
   m_ObjectHideFlags: 0
@@ -731,7 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ufriv_Sofa: {fileID: 42708609}
-  speed: 0
+  speed: 1.37
 --- !u!212 &1863576570
 SpriteRenderer:
   m_ObjectHideFlags: 0
