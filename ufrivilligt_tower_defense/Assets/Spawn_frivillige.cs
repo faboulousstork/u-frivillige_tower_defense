@@ -4,39 +4,42 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UIElements;
-using System.Numerics;
 
 public class Spawn_frivilligt : MonoBehaviour
 {
     public int ilive = 0;
-    public UnityEngine.Vector3 spawn;
+    [SerializeField] GameObject Trekant;
+Vector2 spawn = new Vector2(-27.5f,0f);
     public int wave = 1;
-
-    //public GameObject trekant;
+     public int spawen = 0;
+     IEnumerator wavething(){
+        for(int i =  0; i < wave; i++){
+                spawen -= 1;
+               GameObject duplicate = Instantiate(Trekant,spawn,Quaternion.identity);
+               yield return new WaitForSeconds(0.2f);
+            }
+     }
     void Start()
     {
-        spawn = new UnityEngine.Vector3(transform.position.x, transform.position.y, transform.position.z);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-    public int wawe = 0;
+    } 
+        public int wawe = 0;
     void FixedUpdate()
     {
-        wawe += 1;
-        if (Input.GetKey(KeyCode.Space) && wawe % 119 == 0)
-        {
-            wave += 1;
-            Debug.Log("rasmus er noob");
-            for (int i = 0; i < wave; i++)
-            {
-                Instantiate(new GameObject("trekant"), spawn, new UnityEngine.Quaternion(0, 0, 0, 0));
+        wawe += 1; 
+        if (Input.GetKey(KeyCode.Space) && wawe % 19 == 0){
+            if (spawen <= 1){
+           wave += 1;
+           spawen = wave;
+            Debug.Log("k");
+          StartCoroutine(wavething());
             }
         }
-
-    }
+    
 }
-
+}

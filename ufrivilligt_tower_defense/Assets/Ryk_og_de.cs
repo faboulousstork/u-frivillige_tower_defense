@@ -6,12 +6,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 
-
-
-
-public class Ufriv_spawner : MonoBehaviour
+public class Ryk_og_de : MonoBehaviour
 {
-    
+
     int sofaliv = 10;
     int wave = 1;
    
@@ -33,6 +30,7 @@ public class Ufriv_spawner : MonoBehaviour
     }
 
     Vector2 startPosition;
+    Vector2 goafter = new Vector2(19.0f,0f);
     [SerializeField] GameObject Ufriv_Sofa;
     [SerializeField] float speed;
 
@@ -53,7 +51,7 @@ public class Ufriv_spawner : MonoBehaviour
         if (GameObject.Find("Ufriv_Sofa") != null)
         {
             var step = speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, Ufriv_Sofa.transform.position, step);
+            transform.position = Vector2.MoveTowards(transform.position, goafter, step);
         }
         //rb.MovePosition(newPosition);
     }
