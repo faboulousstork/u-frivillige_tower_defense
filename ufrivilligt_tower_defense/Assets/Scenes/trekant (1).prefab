@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7989669846435514624}
   - component: {fileID: 734712664503579184}
   - component: {fileID: 8476812438140145661}
-  - component: {fileID: 114628402188253468}
   m_Layer: 4
   m_Name: trekant (1)
   m_TagString: Untagged
@@ -103,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ufriv_Sofa: {fileID: 5018665240113619395, guid: f4dade98f5a00a541a8182c7b030455b, type: 3}
-  speed: 2
+  speed: 5
 --- !u!61 &734712664503579184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,17 +176,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114628402188253468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5062516477250862628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f6a67f4a85dd8a498e8c6329cb9e7f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ufriv_Sofa: {fileID: 5018665240113619395, guid: f4dade98f5a00a541a8182c7b030455b, type: 3}
-  speed: 5

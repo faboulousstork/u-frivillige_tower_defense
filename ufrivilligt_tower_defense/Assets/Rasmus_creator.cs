@@ -8,7 +8,7 @@ public class Rasmus_creator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpriteRenderer SpriteRenderer = GetComponent<SpriteRenderer>();
+        //SpriteRenderer SpriteRenderer = GetComponent<SpriteRenderer>();
     }
   
     // Update is called once per frame
@@ -20,8 +20,8 @@ public class Rasmus_creator : MonoBehaviour
         Debug.Log("dint");
      if (Input.GetKeyUp(KeyCode.Mouse0)){
             Debug.Log("clickity");
-            SpriteRenderer.color = green;
-     }
+            //SpriteRenderer.color = green;
+        }
         }
         }
 

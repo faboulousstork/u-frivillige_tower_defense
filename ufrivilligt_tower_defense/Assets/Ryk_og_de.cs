@@ -9,7 +9,8 @@ using Vector2 = UnityEngine.Vector2;
 public class Ryk_og_de : MonoBehaviour
 {
 
-    int sofaliv = 10;
+    int sofaliv = 30;
+    Debug.Log()
     int wave = 1;
    
     void OnTriggerEnter2D(Collider2D col)
@@ -23,6 +24,8 @@ public class Ryk_og_de : MonoBehaviour
             Debug.Log(sofaliv);
             if (sofaliv == 0)
             {
+                Debug.Log("dø dø dø d ødø dø døø ød");
+                Debug.Log(sofaliv);
                 Destroy(col.gameObject);
             }
             Destroy(gameObject);
@@ -53,6 +56,7 @@ public class Ryk_og_de : MonoBehaviour
             var step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, goafter, step);
         }
+
         //rb.MovePosition(newPosition);
     }
 }
