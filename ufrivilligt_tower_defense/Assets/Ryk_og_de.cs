@@ -8,9 +8,14 @@ using Vector2 = UnityEngine.Vector2;
 
 public class Ryk_og_de : MonoBehaviour
 {
-
-    int sofaliv = 30;
-    Debug.Log()
+    public int sofaliv;
+    public void Start()
+    {
+        if (GameObject.Find("trekant") != null)
+        {
+            int sofaliv = 30;
+        }
+    }
     int wave = 1;
    
     void OnTriggerEnter2D(Collider2D col)

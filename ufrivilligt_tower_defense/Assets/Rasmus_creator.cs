@@ -10,7 +10,6 @@ public class Rasmus_creator : MonoBehaviour
     {
         //SpriteRenderer SpriteRenderer = GetComponent<SpriteRenderer>();
     }
-  
     // Update is called once per frame
     void Update()
     {
