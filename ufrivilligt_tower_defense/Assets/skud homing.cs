@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class skudhoming : MonoBehaviour
 {
-    public GameObject skud;
+    /*public GameObject skud;
     public float speed;
     public List<GameObject> objects = new List<GameObject>();
     //public GameObject[] objects; // Array of objects to search through
     public GameObject nearestObject; // The nearest object found
-    public int skudd 
+    public int skudd; 
     void Update()
     {
         nearestObject = FindNearestObject();
@@ -49,5 +49,5 @@ public class skudhoming : MonoBehaviour
 
         return closest;
     }
-
+*/
 }
