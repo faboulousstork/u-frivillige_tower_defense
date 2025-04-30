@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UIElements;
+using JetBrains.Annotations;
 
 public class Spawn_frivilligt : MonoBehaviour
 {
@@ -13,13 +14,17 @@ public class Spawn_frivilligt : MonoBehaviour
      public int wave = 1;
      public int spawen = 0;
      public int spam = 0;
-     IEnumerator wavething()
+     skudhoming skudlist = FindObjectOfType<skudhoming>();
+    IEnumerator wavething()
      {
         for(int i =  0; i < wave; i++)
         {
                spawen -= 1;
                GameObject duplicate = Instantiate(Trekant,spawn,Quaternion.identity);
-               yield return new WaitForSeconds(0.2f);
+               GameObject obj1 = GameObject.Find("Trekant(1)(Clone)");
+               skudhoming.objects.Add(obj1);
+
+            yield return new WaitForSeconds(0.2f);
         }
         yield return new WaitForSeconds(2f);
         spam = 0;
