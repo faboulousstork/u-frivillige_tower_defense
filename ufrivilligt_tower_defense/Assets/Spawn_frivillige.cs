@@ -13,7 +13,8 @@ public class Spawn_frivilligt : MonoBehaviour
      public int wave = 1;
      public int spawen = 0;
      public int spam = 0;
-     IEnumerator wavething(){
+     IEnumerator wavething()
+     {
         for(int i =  0; i < wave; i++)
         {
                spawen -= 1;
@@ -31,6 +32,7 @@ public class Spawn_frivilligt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     } 
         public int kanspawn = 0;
     void FixedUpdate()
@@ -45,5 +47,5 @@ public class Spawn_frivilligt : MonoBehaviour
             spam = 1;
         }
     
-}
+    }
 }

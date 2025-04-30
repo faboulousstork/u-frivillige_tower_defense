@@ -8,16 +8,10 @@ using Vector2 = UnityEngine.Vector2;
 
 public class Ryk_og_de : MonoBehaviour
 {
-    public int sofaliv;
-    public void Start()
-    {
-        if (GameObject.Find("trekant") != null)
-        {
-            int sofaliv = 30;
-        }
-    }
+    
+
     int wave = 1;
-   
+    int liv = 5;
     void OnTriggerEnter2D(Collider2D col)
     {
 
@@ -25,17 +19,39 @@ public class Ryk_og_de : MonoBehaviour
         {
 
 
-            sofaliv -= 1;
-            Debug.Log(sofaliv);
-            if (sofaliv == 0)
+            Sofa_script_liv.sofalivg -= 1;
+            if (Sofa_script_liv.sofalivg == 0)
             {
-                Debug.Log("dø dø dø d ødø dø døø ød");
-                Debug.Log(sofaliv);
                 Destroy(col.gameObject);
             }
             Destroy(gameObject);
         }
+
+
+
+        if (col.gameObject.name == "skud")
+        {
+
+
+            liv -= 1; 
+            Destroy(col.gameObject);
+            if (liv == 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+
     }
+
+
+
+
+
+
+
+
+
 
     Vector2 startPosition;
     Vector2 goafter = new Vector2(19.0f,0f);
@@ -53,7 +69,7 @@ public class Ryk_og_de : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        
         //var step = speed * Time.deltaTime;
         //Vector2 newPosition = Vector2.MoveTowards(transform.position, Ufriv_Sofa.transform.position, step);
         if (GameObject.Find("Ufriv_Sofa") != null)
@@ -61,6 +77,10 @@ public class Ryk_og_de : MonoBehaviour
             var step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, goafter, step);
         }
+
+        
+
+
 
         //rb.MovePosition(newPosition);
     }

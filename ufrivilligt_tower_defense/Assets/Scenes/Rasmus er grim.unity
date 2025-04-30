@@ -1424,7 +1424,6 @@ GameObject:
   - component: {fileID: 1863576569}
   - component: {fileID: 1863576572}
   - component: {fileID: 1863576573}
-  - component: {fileID: 1863576574}
   m_Layer: 5
   m_Name: trekant
   m_TagString: Untagged
@@ -1444,8 +1443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6a67f4a85dd8a498e8c6329cb9e7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ufriv_Sofa: {fileID: 0}
-  speed: 2
+  Ufriv_Sofa: {fileID: 2124425716}
+  speed: 5
 --- !u!212 &1863576570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1588,20 +1587,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1863576574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863576568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f6a67f4a85dd8a498e8c6329cb9e7f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ufriv_Sofa: {fileID: 0}
-  speed: 5
 --- !u!1 &1868144486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1817,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2124425716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5018665240113619395, guid: f4dade98f5a00a541a8182c7b030455b, type: 3}
+  m_PrefabInstance: {fileID: 990083915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
