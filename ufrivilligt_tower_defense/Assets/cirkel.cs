@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class cirkel : MonoBehaviour
 {
-    Vector3 placer = new Vector3(transform.position.x,transform.position.y,-1f);
+int placed = 0;
      [SerializeField] GameObject circle;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,8 +19,9 @@ public class cirkel : MonoBehaviour
     }
     void OnMouseOver()
     {
-        if(Input.GetKeyUp(KeyCode.Mouse0)) {
-        GameObject duplicate = Instantiate(circle,placer,Quaternion.identity);
+        if(Input.GetKeyUp(KeyCode.Mouse0) && placed == 0) {
+        GameObject duplicate = Instantiate(circle,new Vector3(transform.position.x + 0.4f,transform.position.y - 0.1f,-1f),Quaternion.identity);
+        placed += 1;
         }
     }
 }
