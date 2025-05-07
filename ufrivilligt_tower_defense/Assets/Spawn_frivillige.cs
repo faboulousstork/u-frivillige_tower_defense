@@ -22,7 +22,7 @@ public class Spawn_frivilligt : MonoBehaviour
                spawen -= 1;
                GameObject duplicate = Instantiate(Trekant,spawn,Quaternion.identity);
                GameObject obj1 = GameObject.Find("Trekant(1)(Clone)");
-               skudhoming.objects.Add(obj1);
+               //skudhoming.objects.Add(obj1);
 
             yield return new WaitForSeconds(0.2f);
         }

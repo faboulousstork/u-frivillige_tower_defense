@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class skudhoming : MonoBehaviour
+public class skud_homing : MonoBehaviour
 {
     public GameObject skud;
     public float speed;
