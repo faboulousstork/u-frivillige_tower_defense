@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class skud_homing : MonoBehaviour
 {
-    public GameObject skud;
     public float speed;
-    public static skudhoming Instance { get; private set; }
+    //public static skud_homing Instance { get; private set; }
     public static List<GameObject> objects = new List<GameObject>();
     //public GameObject[] objects; // Array of objects to search through
-    public GameObject nearestObject; // The nearest object found
-    public int skudd; 
+    public GameObject nearestObject; // The nearest object found 
     void Update()
     {
         nearestObject = FindNearestObject();
+        if (nearestObject != null)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, nearestObject.transform.position, speed);
+        }
     }
 
     GameObject FindNearestObject()
@@ -32,19 +34,10 @@ public class skud_homing : MonoBehaviour
             {
                 shortestDistance = distance;
                 closest = obj;
+                //Debug.Log("Den her funktion sker fakstiks");
+               // Debug.Log(closest);
             }
         }
-
-
-
-        Debug.Log("over");
-        
-        
-        skud.transform.position = Vector3.MoveTowards(skud.transform.position, closest.transform.position, speed);
-
-
-     
-        
 
         return closest;
     }

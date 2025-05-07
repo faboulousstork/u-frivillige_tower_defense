@@ -14,21 +14,22 @@ public class Spawn_frivilligt : MonoBehaviour
      public int wave = 1;
      public int spawen = 0;
      public int spam = 0;
-     skudhoming skudlist = FindObjectOfType<skudhoming>();
-    IEnumerator wavething()
+     IEnumerator wavething()
      {
         for(int i =  0; i < wave; i++)
         {
-               spawen -= 1;
-               GameObject duplicate = Instantiate(Trekant,spawn,Quaternion.identity);
-               GameObject obj1 = GameObject.Find("Trekant(1)(Clone)");
-               //skudhoming.objects.Add(obj1);
+            spawen -= 1;
+            GameObject duplicate = Instantiate(Trekant,spawn,Quaternion.identity);
+            skud_homing.objects.Add(duplicate);
 
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.45f);
+
         }
         yield return new WaitForSeconds(2f);
+       
         spam = 0;
-     }
+
+    }
     void Start()
     {
         
@@ -43,14 +44,14 @@ public class Spawn_frivilligt : MonoBehaviour
     void FixedUpdate()
     {
         kanspawn += 1;
+
         if (Input.GetKey(KeyCode.Space) && kanspawn % 19 == 0 && spam == 0)
         {
             //wave er antal gange trekanter spawner. 
             wave += 1;
             spawen = wave;
-            StartCoroutine(wavething());
+            StartCoroutine("wavething");
             spam = 1;
         }
-    
     }
 }

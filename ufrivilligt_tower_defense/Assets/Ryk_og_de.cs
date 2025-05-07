@@ -8,12 +8,26 @@ using Vector2 = UnityEngine.Vector2;
 
 public class Ryk_og_de : MonoBehaviour
 {
-    
 
-    int wave = 1;
+    void Start()
+    {
+        Debug.Log("Og en ny trekant er blevet født");
+    }
+   // int wave = 1;
     int liv = 5;
     void OnTriggerEnter2D(Collider2D col)
     {
+   
+        if (col.gameObject.name == "skud(Clone)")
+        {
+
+            liv -= 1;
+            Destroy(col.gameObject);
+            if (liv == 0)
+            {
+                Destroy(gameObject);
+            }
+        }
 
         if (col.gameObject.name == "Ufriv_Sofa")
         {
@@ -28,18 +42,6 @@ public class Ryk_og_de : MonoBehaviour
         }
 
 
-
-        if (col.gameObject.name == "skud")
-        {
-
-
-            liv -= 1; 
-            Destroy(col.gameObject);
-            if (liv == 0)
-            {
-                Destroy(gameObject);
-            }
-        }
 
 
     }
