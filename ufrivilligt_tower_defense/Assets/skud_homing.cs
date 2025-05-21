@@ -10,13 +10,17 @@ public class skud_homing : MonoBehaviour
     public static List<GameObject> objects = new List<GameObject>();
     //public GameObject[] objects; // Array of objects to search through
     public static GameObject nearestObject; // The nearest object found 
-    
+
     void Update()
     {
         nearestObject = FindNearestObject();
         if (nearestObject != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, nearestObject.transform.position, speed);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 

@@ -9,7 +9,7 @@ public class skyder : MonoBehaviour
         for(int i = 0; i > -1f; i++)
         {
 
-           if (i % 10 == 0 && "Trekant(1)Clone" != null)
+           if (i % 10 == 0)
            {              
                 Debug.Log("skud bliver lavet");
                 GameObject duplicate = Instantiate(skud,new Vector3(transform.position.x,transform.position.y,transform.position.z + 0.1f),Quaternion.identity);
