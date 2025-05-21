@@ -8,6 +8,7 @@ using Vector2 = UnityEngine.Vector2;
 
 public class Ryk_og_de : MonoBehaviour
 {
+    public static int penge = 18;
 
     void Start()
     {
@@ -26,6 +27,8 @@ public class Ryk_og_de : MonoBehaviour
             if (liv == 0)
             {
                 Destroy(gameObject);
+                penge += 1;
+                Debug.Log(penge);
             }
         }
 

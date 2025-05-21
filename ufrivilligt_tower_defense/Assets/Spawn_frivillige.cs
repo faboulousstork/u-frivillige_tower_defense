@@ -14,6 +14,7 @@ public class Spawn_frivilligt : MonoBehaviour
      public int wave = 1;
      public int spawen = 0;
      public int spam = 0;
+
      IEnumerator wavething()
      {
         for(int i =  0; i < wave; i++)

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class cirkel : MonoBehaviour
 {
-int placed = 0;
+       int placed = 0;
+    
      [SerializeField] GameObject circle;
     // Start is called before the first frame update
     void Start()
@@ -19,9 +20,12 @@ int placed = 0;
     }
     void OnMouseOver()
     {
-        if(Input.GetKeyUp(KeyCode.Mouse0) && placed == 0) {
-        GameObject duplicate = Instantiate(circle,new Vector3(transform.position.x + 0.4f,transform.position.y - 0.1f,-1f),Quaternion.identity);
-        placed += 1;
+        if(Input.GetKeyUp(KeyCode.Mouse0) && placed == 0 && Ryk_og_de.penge >= 10)
+        {
+            GameObject duplicate = Instantiate(circle,new Vector3(transform.position.x + 0.4f,transform.position.y - 0.1f,-1f),Quaternion.identity);
+            placed += 1;
+            Ryk_og_de.penge -= 10;
+            Debug.Log(Ryk_og_de.penge);
         }
     }
 }

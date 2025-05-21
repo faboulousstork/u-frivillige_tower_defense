@@ -1503,6 +1503,7 @@ GameObject:
   - component: {fileID: 1863576569}
   - component: {fileID: 1863576572}
   - component: {fileID: 1863576573}
+  - component: {fileID: 1863576574}
   m_Layer: 5
   m_Name: trekant
   m_TagString: Untagged
@@ -1666,6 +1667,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1863576574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863576568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c26752a1ffa97f43a7ccce7081a8638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Trekant: {fileID: 1863576568}
 --- !u!1 &1868144486
 GameObject:
   m_ObjectHideFlags: 0

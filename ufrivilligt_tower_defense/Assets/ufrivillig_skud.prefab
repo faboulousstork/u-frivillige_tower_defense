@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 256844174935981834}
   - component: {fileID: 2405520344666068886}
   m_Layer: 5
-  m_Name: skud
+  m_Name: ufrivillig_skud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
