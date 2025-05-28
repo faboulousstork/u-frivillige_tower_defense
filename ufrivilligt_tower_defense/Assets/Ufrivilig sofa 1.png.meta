@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 52892bd285a1d024281cfe2f972ac287
+guid: d74faf4163c98b94c8a969a922f0e47b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -97,43 +97,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ufrivillig_selfie_0
+      name: Ufrivilig sofa_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 156
-        width: 70
-        height: 96
+        x: 116
+        y: 10
+        width: 74
+        height: 141
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b5cf638ffbd591498b9951b9cb31e4c
-      internalID: 1477683153
+      spriteID: 3072ea90c03f6344fab946bd13a85c99
+      internalID: -1146296655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufrivillig_selfie_1
+      name: Ufrivilig sofa_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 265
-        height: 373
+        x: 17
+        y: 6
+        width: 178
+        height: 183
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b1bed52afe0d054581312c41938a1fe
-      internalID: 1450862154
+      spriteID: ff882db3bee34e341b4e6d041a50d7af
+      internalID: -1316882348
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e7366018873d6224cade8cf9ab4212f4
+    spriteID: b10284eeb3ef5c143b534b70e87bbbb0
     internalID: 0
     vertices: []
     indices: 
@@ -149,8 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ufrivillig_selfie_0: 1477683153
-      Ufrivillig_selfie_1: 1450862154
+      Ufrivilig sofa_0: -1146296655
+      Ufrivilig sofa_1: -1316882348
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
