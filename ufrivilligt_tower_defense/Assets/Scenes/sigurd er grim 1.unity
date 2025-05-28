@@ -678,7 +678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Penge: 18'
+  m_Text: 'Penge: 18 '
 --- !u!222 &745408945
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2179,8 +2179,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 963194228}
-  - {fileID: 705507995}
   - {fileID: 1086812422}
+  - {fileID: 705507995}
   - {fileID: 1863576571}
   - {fileID: 768120017}
   - {fileID: 1266213751}
