@@ -16,11 +16,11 @@ public class Ryk_og_de : MonoBehaviour
         Debug.Log("Og en ny trekant er blevet f�dt");
         uiText.text = "Penge start: " + penge.ToString();
     }
-   // int wave = 1;
+    // int wave = 1;
     int liv = 5;
     void OnTriggerEnter2D(Collider2D col)
     {
-   
+
         if (col.gameObject.name == "skud(Clone)")
         {
 
@@ -50,7 +50,7 @@ public class Ryk_og_de : MonoBehaviour
 
 
     }
-    
+
 
 
 
@@ -64,22 +64,23 @@ public class Ryk_og_de : MonoBehaviour
 
 
     Vector2 startPosition;
-    Vector2 goafter = new Vector2(19.0f,0f);
+    Vector2 goafter = new Vector2(19.0f, 0f);
     [SerializeField] GameObject Ufriv_Sofa;
     [SerializeField] float speed;
 
     Rigidbody2D rb;
-    
 
-    
-        
 
-        //rb = GetComponent<Rigidbody2D>();
-    
+
+
+
+    //rb = GetComponent<Rigidbody2D>();
+    int active = 1;
+    public static int cooldown = 0;
 
     void FixedUpdate()
     {
-        
+        active -= 1;
         //var step = speed * Time.deltaTime;
         //Vector2 newPosition = Vector2.MoveTowards(transform.position, Ufriv_Sofa.transform.position, step);
         if (GameObject.Find("Ufriv_Sofa") != null)
@@ -88,10 +89,28 @@ public class Ryk_og_de : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, goafter, step);
         }
 
-        
+
 
 
 
         //rb.MovePosition(newPosition);
+    }
+
+    void OnMouseOver()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (cooldown <= 0)
+            {
+                cooldown = 60;
+                active = 0;
+                StartCoroutine(stunny());
+            }
+        }
+    }
+    IEnumerator stunny()
+    {
+        yield return new WaitForSeconds(0.5f);
+        active = 1;
     }
 }
