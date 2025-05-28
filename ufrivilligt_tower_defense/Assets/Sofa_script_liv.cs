@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Sofa_script_liv : MonoBehaviour
 {
+    Debug.Log("dø")
     public static int sofalivg = 30;
 }
