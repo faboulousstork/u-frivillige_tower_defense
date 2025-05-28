@@ -5,14 +5,16 @@ using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
-
+using UnityEngine.UI;
 public class Ryk_og_de : MonoBehaviour
 {
+    //public text Pengetext;
     public static int penge = 18;
-
+    public Text uiText; //= Pengetext;
     void Start()
     {
-        Debug.Log("Og en ny trekant er blevet født");
+        Debug.Log("Og en ny trekant er blevet fï¿½dt");
+        uiText.text = "Penge start: " + penge.ToString();
     }
    // int wave = 1;
     int liv = 5;
@@ -48,11 +50,14 @@ public class Ryk_og_de : MonoBehaviour
 
 
     }
+    
 
 
 
-
-
+    void Update()
+    {
+        uiText.text = "Penge: " + penge.ToString();
+    }
 
 
 
