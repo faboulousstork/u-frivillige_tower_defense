@@ -20,7 +20,7 @@ public class Ryk_og_de : MonoBehaviour
     int liv = 5;
     void OnTriggerEnter2D(Collider2D col)
     {
-Debug.Log("liv");
+        Debug.Log("liv");
         if (col.gameObject.name == "ufrivillig_skud(Clone)")
         {
             liv -= 1;
@@ -28,9 +28,10 @@ Debug.Log("liv");
             if (liv == 0)
             {
                 cooldown = 0;
-                Destroy(gameObject);
                 penge += 1;
                 Debug.Log(penge);
+                Destroy(gameObject);
+                
             }
         }
 

@@ -11,7 +11,7 @@ public class skyder : MonoBehaviour
 
            if (i % 10 == 0)
            {              
-                Debug.Log("skud bliver lavet");
+                //Debug.Log("skud bliver lavet");
                 GameObject duplicate = Instantiate(skud,new Vector3(transform.position.x,transform.position.y,transform.position.z + 0.1f),Quaternion.identity);
            }
 
