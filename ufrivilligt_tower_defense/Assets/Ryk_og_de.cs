@@ -20,14 +20,14 @@ public class Ryk_og_de : MonoBehaviour
     int liv = 5;
     void OnTriggerEnter2D(Collider2D col)
     {
-
-        if (col.gameObject.name == "skud(Clone)")
+Debug.Log("liv");
+        if (col.gameObject.name == "ufrivillig_skud(Clone)")
         {
-
             liv -= 1;
             Destroy(col.gameObject);
             if (liv == 0)
             {
+                cooldown = 0;
                 Destroy(gameObject);
                 penge += 1;
                 Debug.Log(penge);
@@ -43,6 +43,7 @@ public class Ryk_og_de : MonoBehaviour
             {
                 Destroy(col.gameObject);
             }
+            cooldown = 0;
             Destroy(gameObject);
         }
 
@@ -80,14 +81,16 @@ public class Ryk_og_de : MonoBehaviour
 
     void FixedUpdate()
     {
-        active -= 1;
         //var step = speed * Time.deltaTime;
         //Vector2 newPosition = Vector2.MoveTowards(transform.position, Ufriv_Sofa.transform.position, step);
         if (GameObject.Find("Ufriv_Sofa") != null)
         {
             var step = speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, goafter, step);
-        }
+            if (active == 1)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, goafter, step);
+            }
+            }
 
 
 
@@ -112,5 +115,7 @@ public class Ryk_og_de : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         active = 1;
+        yield return new WaitForSeconds(0.5f);
+        cooldown = 0;
     }
 }
