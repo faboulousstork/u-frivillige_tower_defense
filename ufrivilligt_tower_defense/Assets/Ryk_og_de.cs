@@ -32,7 +32,10 @@ public class Ryk_og_de : MonoBehaviour
                 Debug.Log(penge);
                 Destroy(gameObject);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             }
